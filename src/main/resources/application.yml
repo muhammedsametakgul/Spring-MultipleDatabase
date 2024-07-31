@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    mysql:
+      url: jdbc:mysql://localhost:3306/myfirstdb
+      username: user
+      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    postgresql:
+      url: jdbc:postgresql://localhost:5432/myseconddb
+      username: user
+      password: password
+      driver-class-name: org.postgresql.Driver
+
+  jpa:
+    mysql:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+    postgresql:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
